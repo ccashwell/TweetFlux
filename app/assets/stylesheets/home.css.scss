@@ -1,0 +1,81 @@
+.content {
+  h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: rgba(10,60,150, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+
+    a {
+      text-decoration: none;
+
+      &.download {
+        font-size: 36px;
+      }
+    }
+
+    .pause {
+      top: 7px;
+
+      &:before {
+        content: '\e073';
+      }
+
+      &.paused {
+        &:before {
+          content: '\e072';
+        }
+      }
+    }
+  }
+
+  h1, h2, input {
+    text-align: center;
+  }
+
+  .tweets {
+    min-height: 250px;
+
+    &:empty {
+      background: image-url('waiting.png') no-repeat center;
+    }
+
+    .tweet-wrapper {
+      padding: 5px;
+    }
+
+    .tweet {
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      height: 120px;
+      margin: 0 auto;
+      padding: 5px;
+
+      .avatar {
+        height: 75px;
+        margin: 5px;
+      }
+
+      .content {
+        word-wrap: break-word;
+      }
+
+      .info {
+        color: #666;
+
+        .handle {
+          font-size: 12px;
+          font-weight: bold;
+
+          &:before {
+            content: '@'
+          }
+        }
+
+        .timeago {
+          display: block;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

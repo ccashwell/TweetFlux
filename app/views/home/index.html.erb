@@ -1,0 +1,12 @@
+<h1 class='col-md-12'>
+  <div class='pause glyphicon'></div>
+  <%= link_to 'TweetFlux', root_url %>
+  <%= link_to '', 'https://github.com/ccashwell/tweet-flux-rails', class: 'download glyphicon glyphicon-cloud-download' %>
+</h1>
+<h2 class='col-md-12'>
+  <input type='text' class='hashtag' role='search' value='<%= @hashtag %>' />
+</h2>
+
+<hr />
+
+<%= content_tag 'div', '', class: 'tweets', data: {tweets: @tweets} %>
